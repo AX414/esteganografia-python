@@ -29,7 +29,7 @@ Os **formatos de imagem afetam diretamente a capacidade de ocultar dados** e o q
 
 ### 🔹 **Versão 1 – Anexando código diretamente ao final da imagem**
 
-Neste método, o conteúdo de um arquivo `script.py` é **anexado ao final** da imagem original:
+Neste método, o conteúdo de um arquivo `codigo.py` é **anexado ao final** da imagem original:
 
 ```python
 def embutir_codigo(imagem_original, codigo_txt, imagem_saida):
@@ -43,7 +43,7 @@ def embutir_codigo(imagem_original, codigo_txt, imagem_saida):
     with open(imagem_saida, 'wb') as out:
         out.write(combinado)
 
-embutir_codigo('imagem_original.jpg', 'script.py', 'imagem_com_codigo.jpg')
+embutir_codigo('imagem_original.jpg', 'codigo.py', 'imagem_com_codigo.jpg')
 ```
 
 #### ✅ Vantagens:
@@ -65,8 +65,8 @@ Neste método, utilizamos a biblioteca `stegano` para esconder a mensagem **nos 
 from stegano import lsb
 
 imagem_codificada = lsb.hide("./imagem_original.jpg","Olá mundo!")
-imagem_codificada.save("./imagem_com_stegano.png")
-mensagem = lsb.reveal("./imagem_com_stegano.png")
+imagem_codificada.save("./imagem_com_codigo.png")
+mensagem = lsb.reveal("./imagem_com_codigo.png")
 print(f"Mensagem escondida: {mensagem}")
 ```
 
