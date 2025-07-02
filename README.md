@@ -46,13 +46,13 @@ def embutir_codigo(imagem_original, codigo_txt, imagem_saida):
 embutir_codigo('imagem_original.jpg', 'codigo.py', 'imagem_com_codigo.jpg')
 ```
 
-#### ✅ Vantagens:
+#### Vantagens:
 
 - A imagem original **não é alterada** internamente.
 - Visualizadores de imagem **ignoram o conteúdo extra** no final do JPEG.
 - Tamanho final do arquivo aumenta **apenas pelo conteúdo inserido**.
 
-#### 📊 Exemplo:
+#### Exemplo:
 
 - Imagem original: `42.20 KB`
 - Imagem com código: `42.23 KB` ➜ aumento de apenas `0.03 KB`
@@ -70,18 +70,18 @@ mensagem = lsb.reveal("./imagem_com_codigo.png")
 print(f"Mensagem escondida: {mensagem}")
 ```
 
-#### ⚠️ Características:
+#### Características:
 
 - O Stegano **converte a imagem para PNG**, mesmo que o original fosse JPEG.
 - A modificação nos pixels é **sutil, mas massiva**.
 - O arquivo final é **muito maior**, mesmo para mensagens pequenas.
 
-#### 📊 Exemplo:
+#### Exemplo:
 
 - Imagem original: `42.20 KB`
 - Imagem com mensagem LSB: `217.42 KB` ➜ aumento de `175.22 KB`
 
-## 🔍 Comparação entre os métodos
+## Comparação entre os métodos
 
 | Método                   | Formato Final | Alteração Visual | Tamanho Final   |
 |--------------------------|---------------|------------------|------------------|
